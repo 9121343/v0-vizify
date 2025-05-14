@@ -1,0 +1,49 @@
+/* iOS Input Fixes */
+@supports (-webkit-touch-callout: none) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevents zoom on focus in iOS */
+  }
+
+  /* Fix for iOS button styling */
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+/* Android Chrome Input Fixes */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  height: 48px; /* Ensures consistent height on Android */
+}
+
+/* Fix for Firefox focus rings */
+:focus {
+  outline: none;
+}
+
+/* Ensure touch targets are large enough */
+button,
+a,
+[role="button"],
+input[type="checkbox"],
+input[type="radio"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Fix for mobile Safari overflow issues */
+.overflow-auto,
+.overflow-y-auto,
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for mobile tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
