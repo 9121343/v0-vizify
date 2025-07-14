@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { StarfieldBackground } from "@/components/starfield-background";
@@ -5,7 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { Zap, Sparkles, Star, ShoppingBag } from "lucide-react";
+import { motion } from "framer-motion";
+import { Zap, Sparkles, Star, ShoppingBag, Heart, Palette } from "lucide-react";
+import Image from "next/image";
 
 const collections = [
   {
