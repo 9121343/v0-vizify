@@ -194,14 +194,20 @@ export default function CollectionPage() {
               {collections.map((shoe, index) => (
                 <motion.div
                   key={shoe.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.1,
-                    ease: "easeOut",
-                  }}
-                  whileHover={{ y: -8 }}
+                  initial={mounted ? { opacity: 0, y: 50 } : false}
+                  animate={
+                    mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
+                  }
+                  transition={
+                    mounted
+                      ? {
+                          duration: 0.6,
+                          delay: index * 0.1,
+                          ease: "easeOut",
+                        }
+                      : { duration: 0 }
+                  }
+                  whileHover={mounted ? { y: -8 } : {}}
                   className="group"
                 >
                   <Card className="bg-black/40 border-white/10 hover:border-violet-500/50 transition-all duration-500 group overflow-hidden backdrop-blur-sm">
