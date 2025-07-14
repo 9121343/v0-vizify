@@ -28,8 +28,8 @@ export default function Navbar() {
       <div className="hidden md:flex items-center space-x-8">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/collection">Collection</NavLink>
+        <NavLink href="/customize-shoe">Customize</NavLink>
         <NavLink href="/lookbook">Lookbook</NavLink>
-        <NavLink href="/3d-model">3D Model</NavLink>
         <NavLink href="/about">About</NavLink>
         <NavLink href="/contact">Contact</NavLink>
       </div>
