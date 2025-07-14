@@ -15,6 +15,7 @@ import {
   Heart,
   Zap,
   Star,
+  Eye,
 } from "lucide-react";
 
 const teamMembers = [
