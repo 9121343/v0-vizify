@@ -8,6 +8,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="relative min-h-[calc(100vh-76px)] flex items-center">
       {/* Floating shoes background */}
