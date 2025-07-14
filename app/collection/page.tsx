@@ -349,31 +349,41 @@ export default function CollectionPage() {
         <section className="py-20 px-6 border-t border-white/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              whileInView={
+                mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
+              }
+              transition={mounted ? { duration: 0.6 } : { duration: 0 }}
               className="text-4xl font-bold text-white mb-6"
             >
               Ready to Experience the Future?
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              whileInView={
+                mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
+              }
+              transition={
+                mounted ? { duration: 0.6, delay: 0.2 } : { duration: 0 }
+              }
               className="text-xl text-gray-300 mb-8"
             >
               Join thousands of satisfied customers who've already stepped into
               tomorrow.
             </motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              whileInView={
+                mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }
+              }
+              transition={
+                mounted ? { duration: 0.6, delay: 0.4 } : { duration: 0 }
+              }
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={mounted ? { scale: 1.05 } : {}}
+                whileTap={mounted ? { scale: 0.95 } : {}}
               >
                 <Button
                   size="lg"
@@ -387,8 +397,8 @@ export default function CollectionPage() {
                 </Button>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={mounted ? { scale: 1.05 } : {}}
+                whileTap={mounted ? { scale: 0.95 } : {}}
               >
                 <Button
                   size="lg"
