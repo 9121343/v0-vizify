@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link href="/shop/auth/sign-in">Sign In</Link>
         </Button>
         <Button className="relative group overflow-hidden" asChild>
-          <Link href="/shop">
+          <Link href="/collection">
             <span className="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 group-hover:opacity-90 transition-opacity"></span>
             <span className="absolute inset-0 bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 blur-lg transition-opacity"></span>
             <span className="relative flex items-center">
