@@ -41,7 +41,7 @@ export default function Navbar() {
           className="text-white hover:text-violet-400"
           asChild
         >
-          <Link href="/shop/auth/sign-in">Sign In</Link>
+          <Link href="/auth/sign-in">Sign In</Link>
         </Button>
         <Button className="relative group overflow-hidden" asChild>
           <Link href="/collection">
