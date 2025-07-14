@@ -226,9 +226,13 @@ export default function CollectionPage() {
 
                         {shoe.featured && (
                           <motion.div
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
+                            initial={mounted ? { scale: 0 } : false}
+                            animate={mounted ? { scale: 1 } : { scale: 1 }}
+                            transition={
+                              mounted
+                                ? { delay: 0.3 + index * 0.1 }
+                                : { duration: 0 }
+                            }
                           >
                             <Badge className="absolute top-4 right-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 shadow-lg">
                               <Star className="w-3 h-3 mr-1" />
