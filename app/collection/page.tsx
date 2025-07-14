@@ -125,17 +125,21 @@ export default function CollectionPage() {
               </Badge>
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={mounted ? { opacity: 0, y: 30 } : false}
+              animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+              transition={
+                mounted ? { duration: 0.8, delay: 0.2 } : { duration: 0 }
+              }
               className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-violet-400 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent mb-6"
             >
               Cosmic Collection
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={mounted ? { opacity: 0, y: 20 } : false}
+              animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+              transition={
+                mounted ? { duration: 0.8, delay: 0.4 } : { duration: 0 }
+              }
               className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
             >
               Step into the future with our revolutionary footwear collection.
