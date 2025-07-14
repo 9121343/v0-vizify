@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { ShoppingBag, BookOpen } from "lucide-react"
-import { FloatingShoes } from "@/components/floating-shoes"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ShoppingBag, BookOpen, Sparkles, Zap } from "lucide-react";
+import { FloatingShoes } from "@/components/floating-shoes";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -16,7 +16,11 @@ export default function Hero() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Step Into the Future with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">
@@ -32,7 +36,8 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-400 text-xl mb-8 max-w-2xl mx-auto"
           >
-            Where cosmic design meets cutting-edge comfort. Discover footwear that defines tomorrow.
+            Where cosmic design meets cutting-edge comfort. Discover footwear
+            that defines tomorrow.
           </motion.p>
 
           <motion.div
@@ -41,7 +46,11 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button size="lg" className="relative group overflow-hidden" asChild>
+            <Button
+              size="lg"
+              className="relative group overflow-hidden"
+              asChild
+            >
               <Link href="/collection">
                 <span className="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 group-hover:opacity-90 transition-opacity"></span>
                 <span className="absolute inset-0 bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 blur-lg transition-opacity"></span>
@@ -69,5 +78,5 @@ export default function Hero() {
       {/* Glowing orb accent */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-[800px] h-[200px] rounded-full bg-violet-600/20 blur-[100px] -z-10"></div>
     </div>
-  )
+  );
 }
