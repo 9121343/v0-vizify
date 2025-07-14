@@ -10,6 +10,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Zap, Sparkles, Star, ShoppingBag, Heart, Palette } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const collections = [
   {
