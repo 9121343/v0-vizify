@@ -1,17 +1,20 @@
+import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import { StarfieldBackground } from "@/components/starfield-background";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">FRIZBLEY</h1>
-        <p className="text-xl">Cosmic Footwear Innovation</p>
-        <div className="mt-8">
-          <a
-            href="/shop"
-            className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded text-white"
-          >
-            Shop Now
-          </a>
-        </div>
+    <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      {/* Cosmic background with moving stars */}
+      <div className="h-full w-full absolute inset-0 z-0">
+        <StarfieldBackground />
+      </div>
+
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <Footer />
       </div>
     </main>
   );
