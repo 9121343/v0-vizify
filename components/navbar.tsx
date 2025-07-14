@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { useState } from "react"
-import { Menu, X, ShoppingBag } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <motion.nav
@@ -36,7 +36,11 @@ export default function Navbar() {
 
       {/* Desktop CTA Buttons */}
       <div className="hidden md:flex items-center space-x-4">
-        <Button variant="ghost" className="text-white hover:text-violet-400" asChild>
+        <Button
+          variant="ghost"
+          className="text-white hover:text-violet-400"
+          asChild
+        >
           <Link href="/shop/auth/sign-in">Sign In</Link>
         </Button>
         <Button className="relative group overflow-hidden" asChild>
@@ -61,7 +65,11 @@ export default function Navbar() {
           aria-expanded={mobileMenuOpen}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </Button>
       </div>
 
@@ -69,7 +77,11 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="absolute top-16 left-0 right-0 bg-black/95 border-b border-white/10 p-4 md:hidden z-50">
           <div className="flex flex-col space-y-4">
-            <Link href="/" className="text-white hover:text-violet-400 py-2" onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/"
+              className="text-white hover:text-violet-400 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Home
             </Link>
             <Link
@@ -108,8 +120,15 @@ export default function Navbar() {
               Contact
             </Link>
             <div className="pt-4 border-t border-white/10 flex flex-col space-y-3">
-              <Button variant="ghost" className="text-white hover:text-violet-400 justify-start" asChild>
-                <Link href="/shop/auth/sign-in" onClick={() => setMobileMenuOpen(false)}>
+              <Button
+                variant="ghost"
+                className="text-white hover:text-violet-400 justify-start"
+                asChild
+              >
+                <Link
+                  href="/shop/auth/sign-in"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Sign In
                 </Link>
               </Button>
@@ -127,14 +146,23 @@ export default function Navbar() {
         </div>
       )}
     </motion.nav>
-  )
+  );
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function NavLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
   return (
-    <Link href={href} className="text-gray-300 hover:text-white transition-colors relative group">
+    <Link
+      href={href}
+      className="text-gray-300 hover:text-white transition-colors relative group"
+    >
       {children}
       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-all group-hover:w-full" />
     </Link>
-  )
+  );
 }
