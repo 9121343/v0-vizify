@@ -41,9 +41,11 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={mounted ? { opacity: 0, y: 30 } : false}
+            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+            transition={
+              mounted ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }
+            }
           >
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               Step Into the Future with
@@ -54,9 +56,13 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            initial={mounted ? { opacity: 0, y: 20 } : false}
+            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+            transition={
+              mounted
+                ? { duration: 0.8, delay: 0.3, ease: "easeOut" }
+                : { duration: 0 }
+            }
             className="text-gray-300 text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed"
           >
             Where cosmic design meets cutting-edge comfort. Discover footwear
