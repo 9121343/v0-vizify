@@ -113,9 +113,7 @@ export default function CollectionPage() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              {...animationProps}
               className="flex items-center justify-center mb-6"
             >
               <Sparkles className="w-8 h-8 text-violet-400 mr-3" />
