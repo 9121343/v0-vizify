@@ -279,7 +279,7 @@ export default function CollectionPage() {
                           </Badge>
                           <motion.span
                             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400"
-                            whileHover={{ scale: 1.1 }}
+                            whileHover={mounted ? { scale: 1.1 } : {}}
                           >
                             {shoe.price}
                           </motion.span>
