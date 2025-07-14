@@ -244,9 +244,11 @@ export default function CollectionPage() {
                         {/* Quick action overlay */}
                         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                           <motion.div
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ delay: 0.2 }}
+                            initial={mounted ? { scale: 0 } : false}
+                            animate={mounted ? { scale: 1 } : { scale: 1 }}
+                            transition={
+                              mounted ? { delay: 0.2 } : { duration: 0 }
+                            }
                             className="flex gap-3 opacity-0 group-hover:opacity-100"
                           >
                             <Button
