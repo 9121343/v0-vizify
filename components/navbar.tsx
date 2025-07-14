@@ -92,6 +92,13 @@ export default function Navbar() {
               Collection
             </Link>
             <Link
+              href="/customize-shoe"
+              className="text-white hover:text-violet-400 py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Customize Shoe
+            </Link>
+            <Link
               href="/lookbook"
               className="text-white hover:text-violet-400 py-2"
               onClick={() => setMobileMenuOpen(false)}
