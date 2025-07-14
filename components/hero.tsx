@@ -15,17 +15,29 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Animated badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="inline-flex items-center mb-8 px-4 py-2 rounded-full bg-violet-950/30 border border-violet-500/20 backdrop-blur-sm"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            <Sparkles className="w-4 h-4 text-violet-400 mr-2" />
+            <span className="text-violet-300 text-sm font-medium">
+              Cosmic Innovation • Limited Edition
+            </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               Step Into the Future with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-500">
-                {" "}
-                Frizbley
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 animate-pulse">
+                FRIZBLEY
               </span>
             </h1>
           </motion.div>
@@ -33,18 +45,23 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-gray-400 text-xl mb-8 max-w-2xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="text-gray-300 text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed"
           >
             Where cosmic design meets cutting-edge comfort. Discover footwear
-            that defines tomorrow.
+            that
+            <span className="text-violet-300 font-medium">
+              {" "}
+              defines tomorrow
+            </span>
+            .
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
             <Button
               size="lg"
