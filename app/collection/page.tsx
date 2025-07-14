@@ -311,8 +311,8 @@ export default function CollectionPage() {
 
                         <div className="flex gap-3">
                           <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
+                            whileHover={mounted ? { scale: 1.02 } : {}}
+                            whileTap={mounted ? { scale: 0.98 } : {}}
                             className="flex-1"
                           >
                             <Button
@@ -324,8 +324,8 @@ export default function CollectionPage() {
                             </Button>
                           </motion.div>
                           <motion.div
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
+                            whileHover={mounted ? { scale: 1.1 } : {}}
+                            whileTap={mounted ? { scale: 0.9 } : {}}
                           >
                             <Button
                               size="sm"
