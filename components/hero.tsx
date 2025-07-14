@@ -71,9 +71,9 @@ export default function Hero() {
                 className="text-white border-violet-400/50 hover:bg-violet-500/20 hover:border-violet-400 px-8 py-4 text-lg backdrop-blur-sm"
                 asChild
               >
-                <Link href="/lookbook">
-                  <BookOpen className="mr-3 h-5 w-5" />
-                  See Lookbook
+                <Link href="/customize-shoe">
+                  <Sparkles className="mr-3 h-5 w-5" />
+                  Customize Shoe
                 </Link>
               </Button>
             </div>
