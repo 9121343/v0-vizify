@@ -106,8 +106,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Glowing orb accent */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-[800px] h-[200px] rounded-full bg-violet-600/20 blur-[100px] -z-10"></div>
+      {/* Enhanced glowing effects */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-[1000px] h-[300px] rounded-full bg-gradient-to-r from-violet-600/20 via-purple-600/20 to-fuchsia-600/20 blur-[120px] -z-10"></div>
+      <div className="absolute top-20 right-10 w-[400px] h-[400px] rounded-full bg-violet-500/10 blur-[80px] -z-10"></div>
+      <div className="absolute top-40 left-10 w-[300px] h-[300px] rounded-full bg-fuchsia-500/10 blur-[60px] -z-10"></div>
     </div>
   );
 }
