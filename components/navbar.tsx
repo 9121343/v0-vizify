@@ -126,7 +126,7 @@ export default function Navbar() {
                 asChild
               >
                 <Link
-                  href="/shop/auth/sign-in"
+                  href="/auth/sign-in"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Sign In
