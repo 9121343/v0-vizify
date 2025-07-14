@@ -63,31 +63,45 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
-            <Button
-              size="lg"
-              className="relative group overflow-hidden"
-              asChild
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <Link href="/collection">
-                <span className="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 group-hover:opacity-90 transition-opacity"></span>
-                <span className="absolute inset-0 bg-gradient-to-r from-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 blur-lg transition-opacity"></span>
-                <span className="relative flex items-center">
-                  <ShoppingBag className="mr-2 h-5 w-5" />
-                  Shop Collection
-                </span>
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-white border-violet-500/50 hover:bg-violet-500/20"
-              asChild
+              <Button
+                size="lg"
+                className="relative group overflow-hidden px-8 py-4 text-lg"
+                asChild
+              >
+                <Link href="/collection">
+                  <span className="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 group-hover:opacity-90 transition-all duration-300"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-violet-400 to-fuchsia-400 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-300"></span>
+                  <span className="relative flex items-center font-semibold">
+                    <ShoppingBag className="mr-3 h-5 w-5" />
+                    Shop Collection
+                    <Zap className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </span>
+                </Link>
+              </Button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <Link href="/lookbook">
-                <BookOpen className="mr-2 h-5 w-5" />
-                See Lookbook
-              </Link>
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-white border-violet-400/50 hover:bg-violet-500/20 hover:border-violet-400 px-8 py-4 text-lg backdrop-blur-sm"
+                asChild
+              >
+                <Link href="/lookbook">
+                  <BookOpen className="mr-3 h-5 w-5" />
+                  See Lookbook
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </div>
