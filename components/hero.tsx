@@ -1,70 +1,41 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { ShoppingBag, BookOpen, Sparkles, Zap } from "lucide-react";
 import { FloatingShoes } from "@/components/floating-shoes";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { NoSSR } from "@/components/no-ssr";
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div className="relative min-h-[calc(100vh-76px)] flex items-center">
       {/* Floating shoes background */}
       <div className="absolute inset-0 overflow-hidden">
-        <FloatingShoes count={3} />
+        <NoSSR>
+          <FloatingShoes count={3} />
+        </NoSSR>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Animated badge */}
-          <motion.div
-            initial={mounted ? { opacity: 0, scale: 0.9 } : false}
-            animate={
-              mounted ? { opacity: 1, scale: 1 } : { opacity: 1, scale: 1 }
-            }
-            transition={
-              mounted ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }
-            }
-            className="inline-flex items-center mb-8 px-4 py-2 rounded-full bg-violet-950/30 border border-violet-500/20 backdrop-blur-sm"
-          >
+          <div className="inline-flex items-center mb-8 px-4 py-2 rounded-full bg-violet-950/30 border border-violet-500/20 backdrop-blur-sm">
             <Sparkles className="w-4 h-4 text-violet-400 mr-2" />
             <span className="text-violet-300 text-sm font-medium">
               Cosmic Innovation • Limited Edition
             </span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={mounted ? { opacity: 0, y: 30 } : false}
-            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-            transition={
-              mounted ? { duration: 0.8, ease: "easeOut" } : { duration: 0 }
-            }
-          >
+          <div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               Step Into the Future with
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 animate-pulse">
                 FRIZBLEY
               </span>
             </h1>
-          </motion.div>
+          </div>
 
-          <motion.p
-            initial={mounted ? { opacity: 0, y: 20 } : false}
-            animate={mounted ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
-            transition={
-              mounted
-                ? { duration: 0.8, delay: 0.3, ease: "easeOut" }
-                : { duration: 0 }
-            }
-            className="text-gray-300 text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed"
-          >
+          <p className="text-gray-300 text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
             Where cosmic design meets cutting-edge comfort. Discover footwear
             that
             <span className="text-violet-300 font-medium">
@@ -72,19 +43,10 @@ export default function Hero() {
               defines tomorrow
             </span>
             .
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6"
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="transform hover:scale-105 transition-transform duration-200">
               <Button
                 size="lg"
                 className="relative group overflow-hidden px-8 py-4 text-lg"
@@ -100,13 +62,9 @@ export default function Hero() {
                   </span>
                 </Link>
               </Button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
+            <div className="transform hover:scale-102 transition-transform duration-200">
               <Button
                 size="lg"
                 variant="outline"
@@ -118,8 +76,8 @@ export default function Hero() {
                   See Lookbook
                 </Link>
               </Button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
 
