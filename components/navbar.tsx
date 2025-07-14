@@ -136,7 +136,10 @@ export default function Navbar() {
                 className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white w-full"
                 asChild
               >
-                <Link href="/shop" onClick={() => setMobileMenuOpen(false)}>
+                <Link
+                  href="/collection"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   <ShoppingBag className="w-4 h-4 mr-2" />
                   Shop Now
                 </Link>
