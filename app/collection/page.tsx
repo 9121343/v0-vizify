@@ -82,6 +82,24 @@ const collections = [
 ];
 
 export default function CollectionPage() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent hydration mismatch by not animating during SSR
+  const animationProps = mounted
+    ? {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 },
+      }
+    : {
+        initial: false,
+        animate: false,
+      };
+
   return (
     <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="h-full w-full absolute inset-0 z-0">
