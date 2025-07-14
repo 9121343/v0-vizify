@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ShoppingBag, BookOpen, Sparkles, Zap } from "lucide-react";
 import { FloatingShoes } from "@/components/floating-shoes";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   return (
