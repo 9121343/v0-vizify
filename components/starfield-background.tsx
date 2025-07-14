@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef } from "react";
 
 export function StarfieldBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -52,8 +52,8 @@ export function StarfieldBackground() {
 
     let time = 0;
 
-    // Optimized animation loop
-    const animate = useCallback(() => {
+    // Optimized animation loop - moved outside of useCallback
+    const animate = () => {
       time += 0.01;
 
       // Subtle trail effect for smoothness
@@ -138,7 +138,7 @@ export function StarfieldBackground() {
       });
 
       animationRef.current = requestAnimationFrame(animate);
-    }, []);
+    };
 
     animate();
 
