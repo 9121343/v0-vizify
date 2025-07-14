@@ -25,9 +25,13 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto text-center">
           {/* Animated badge */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial={mounted ? { opacity: 0, scale: 0.9 } : false}
+            animate={
+              mounted ? { opacity: 1, scale: 1 } : { opacity: 1, scale: 1 }
+            }
+            transition={
+              mounted ? { duration: 0.6, ease: "easeOut" } : { duration: 0 }
+            }
             className="inline-flex items-center mb-8 px-4 py-2 rounded-full bg-violet-950/30 border border-violet-500/20 backdrop-blur-sm"
           >
             <Sparkles className="w-4 h-4 text-violet-400 mr-2" />
