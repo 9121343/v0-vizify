@@ -1,18 +1,20 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { StarfieldBackground } from "@/components/starfield-background";
+import { CSSStarfieldBackground } from "@/components/css-starfield-background";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Camera, Heart, Share2, ArrowRight, Play } from "lucide-react";
+import Image from "next/image";
 
 const lookbookEntries = [
   {
     id: 1,
     title: "Urban Cosmic",
     description: "Street style meets space-age technology",
-    image: "/placeholder.svg",
+    image:
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=500&fit=crop&crop=center&auto=format&q=80",
     category: "Street Style",
     featured: true,
     likes: 1247,
@@ -21,7 +23,8 @@ const lookbookEntries = [
     id: 2,
     title: "Galactic Athlete",
     description: "Performance wear for the modern champion",
-    image: "/placeholder.svg",
+    image:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop&crop=center&auto=format&q=80",
     category: "Athletic",
     featured: false,
     likes: 892,
@@ -30,7 +33,8 @@ const lookbookEntries = [
     id: 3,
     title: "Nebula Nights",
     description: "Evening elegance with celestial flair",
-    image: "/placeholder.svg",
+    image:
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=500&fit=crop&crop=center&auto=format&q=80",
     category: "Evening",
     featured: true,
     likes: 1563,
@@ -39,7 +43,8 @@ const lookbookEntries = [
     id: 4,
     title: "Solar Casual",
     description: "Everyday comfort with stellar style",
-    image: "/placeholder.svg",
+    image:
+      "https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=400&h=500&fit=crop&crop=center&auto=format&q=80",
     category: "Casual",
     featured: false,
     likes: 734,
@@ -48,7 +53,8 @@ const lookbookEntries = [
     id: 5,
     title: "Cosmic Executive",
     description: "Professional attire for the space age",
-    image: "/placeholder.svg",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=center&auto=format&q=80",
     category: "Professional",
     featured: true,
     likes: 945,
@@ -57,7 +63,8 @@ const lookbookEntries = [
     id: 6,
     title: "Interstellar Adventure",
     description: "Ready for any journey across the galaxy",
-    image: "/placeholder.svg",
+    image:
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=400&h=500&fit=crop&crop=center&auto=format&q=80",
     category: "Adventure",
     featured: false,
     likes: 1128,
