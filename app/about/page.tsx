@@ -245,7 +245,15 @@ export default function AboutPage() {
                   className="bg-black/40 border-white/10 hover:border-violet-500/50 transition-all group"
                 >
                   <CardContent className="p-6 text-center">
-                    <div className="text-6xl mb-4">{member.avatar}</div>
+                    <div className="mb-4">
+                      <Image
+                        src={member.avatar}
+                        alt={member.name}
+                        width={80}
+                        height={80}
+                        className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-violet-500/50"
+                      />
+                    </div>
                     <h3 className="text-xl font-bold text-white mb-1">
                       {member.name}
                     </h3>
