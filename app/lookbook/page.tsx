@@ -193,10 +193,15 @@ export default function LookbookPage() {
                   <CardContent className="p-0">
                     <div className="relative overflow-hidden">
                       <div
-                        className={`${index === 0 ? "aspect-[4/3]" : "aspect-square"} bg-gradient-to-br from-violet-900/20 to-fuchsia-900/20 flex items-center justify-center relative`}
+                        className={`${index === 0 ? "aspect-[4/3]" : "aspect-square"} bg-gradient-to-br from-violet-900/20 to-fuchsia-900/20 relative`}
                       >
-                        <div className="w-40 h-40 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-full opacity-20 group-hover:opacity-40 transition-opacity" />
-                        <span className="absolute text-8xl">👤</span>
+                        <Image
+                          src={entry.image}
+                          alt={entry.title}
+                          width={400}
+                          height={index === 0 ? 300 : 400}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
 
                         {entry.featured && (
                           <Badge className="absolute top-4 right-4 bg-gradient-to-r from-violet-600 to-fuchsia-600">
