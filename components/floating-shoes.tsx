@@ -1,77 +1,31 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import Image from "next/image"
-
-export function FloatingShoes({ count = 3 }) {
-  const [dimensions, setDimensions] = useState({ width: 1200, height: 800 })
-
-  useEffect(() => {
-    // Update dimensions only on client side
-    setDimensions({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    })
-
-    const handleResize = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
-    }
-
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  // Shoe images - using placeholder for now
-  const shoeImages = [
-    "/placeholder.svg?height=300&width=400",
-    "/placeholder.svg?height=300&width=400",
-    "/placeholder.svg?height=300&width=400",
-  ]
-
+export function FloatingShoes({ count = 2 }) {
+  // Simple CSS-only floating elements - no JavaScript needed
   return (
-    <div className="relative w-full h-full">
-      {Array.from({ length: count }).map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute"
-          initial={{
-            x: Math.random() * dimensions.width,
-            y: Math.random() * dimensions.height,
-            rotate: Math.random() * 20 - 10,
-          }}
-          animate={{
-            x: [Math.random() * dimensions.width, Math.random() * dimensions.width, Math.random() * dimensions.width],
-            y: [
-              Math.random() * dimensions.height,
-              Math.random() * dimensions.height,
-              Math.random() * dimensions.height,
-            ],
-            rotate: [Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10],
-          }}
-          transition={{
-            duration: 20 + Math.random() * 10,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
-          }}
-        >
-          <div className="relative w-48 h-48 transform hover:scale-110 transition-transform duration-300">
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-full blur-xl"></div>
-            <div className="relative w-full h-full flex items-center justify-center">
-              <Image
-                src={shoeImages[i % shoeImages.length] || "/placeholder.svg"}
-                alt="Frizbley Shoe"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </div>
-          </div>
-        </motion.div>
-      ))}
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        className="absolute animate-float opacity-10"
+        style={{
+          left: "20%",
+          top: "15%",
+          animationDelay: "0s",
+          animationDuration: "8s",
+        }}
+      >
+        <div className="w-24 h-24 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full opacity-20 blur-sm" />
+      </div>
+      <div
+        className="absolute animate-float opacity-10"
+        style={{
+          left: "70%",
+          top: "60%",
+          animationDelay: "3s",
+          animationDuration: "10s",
+        }}
+      >
+        <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-full opacity-15 blur-sm" />
+      </div>
     </div>
-  )
+  );
 }
