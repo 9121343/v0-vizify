@@ -1,7 +1,7 @@
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { StarfieldBackground } from "@/components/starfield-background";
+import { CSSStarfieldBackground } from "@/components/css-starfield-background";
 
 export default function Home() {
   return (
