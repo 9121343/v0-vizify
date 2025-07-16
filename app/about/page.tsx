@@ -87,7 +87,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="h-full w-full absolute inset-0 z-0">
-        <StarfieldBackground />
+        <CSSStarfieldBackground />
       </div>
 
       <div className="relative z-10">
