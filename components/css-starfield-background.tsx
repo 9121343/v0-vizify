@@ -16,71 +16,75 @@ export function CSSStarfieldBackground() {
         }}
       />
 
-      {/* Static CSS stars using box-shadow for performance */}
-      <div
-        className="absolute inset-0 opacity-60"
-        style={{
-          background: "transparent",
-          boxShadow: `
-            10px 10px 0 0 white,
-            50px 30px 0 0 rgba(255,255,255,0.8),
-            90px 60px 0 0 rgba(255,255,255,0.6),
-            130px 20px 0 0 white,
-            170px 80px 0 0 rgba(255,255,255,0.7),
-            210px 40px 0 0 rgba(255,255,255,0.5),
-            250px 70px 0 0 white,
-            290px 15px 0 0 rgba(255,255,255,0.8),
-            330px 50px 0 0 rgba(255,255,255,0.6),
-            370px 90px 0 0 white,
-            410px 25px 0 0 rgba(255,255,255,0.7),
-            450px 65px 0 0 rgba(255,255,255,0.5),
-            490px 85px 0 0 white,
-            530px 35px 0 0 rgba(255,255,255,0.8),
-            570px 75px 0 0 rgba(255,255,255,0.6),
-            610px 45px 0 0 white,
-            650px 95px 0 0 rgba(255,255,255,0.7),
-            690px 55px 0 0 rgba(255,255,255,0.5),
-            730px 15px 0 0 white,
-            770px 85px 0 0 rgba(255,255,255,0.8),
-            810px 25px 0 0 rgba(255,255,255,0.6),
-            850px 65px 0 0 white,
-            890px 95px 0 0 rgba(255,255,255,0.7),
-            930px 35px 0 0 rgba(255,255,255,0.5),
-            970px 75px 0 0 white,
-            1010px 45px 0 0 rgba(255,255,255,0.8),
-            1050px 85px 0 0 rgba(255,255,255,0.6),
-            1090px 55px 0 0 white
-          `,
-        }}
-        className="animate-twinkle"
-        style={{
-          background: "transparent",
-          boxShadow: `
-            10px 10px 0 0 white,
-            150px 30px 0 0 rgba(255,255,255,0.8),
-            290px 60px 0 0 rgba(255,255,255,0.6),
-            430px 20px 0 0 white,
-            570px 80px 0 0 rgba(255,255,255,0.7),
-            710px 40px 0 0 rgba(255,255,255,0.5),
-            850px 70px 0 0 white,
-            990px 15px 0 0 rgba(255,255,255,0.8),
-            130px 150px 0 0 rgba(255,255,255,0.6),
-            270px 190px 0 0 white,
-            410px 125px 0 0 rgba(255,255,255,0.7),
-            550px 165px 0 0 rgba(255,255,255,0.5),
-            690px 185px 0 0 white,
-            830px 135px 0 0 rgba(255,255,255,0.8),
-            970px 175px 0 0 rgba(255,255,255,0.6),
-            110px 245px 0 0 white,
-            250px 295px 0 0 rgba(255,255,255,0.7),
-            390px 255px 0 0 rgba(255,255,255,0.5),
-            530px 215px 0 0 white,
-            670px 285px 0 0 rgba(255,255,255,0.8)
-          `,
-        }}
-      />
+      {/* Simple scattered star dots using CSS */}
+      <div className="absolute inset-0">
+        {/* Layer 1 - Larger stars */}
+        <div className="absolute top-[10%] left-[15%] w-1 h-1 bg-white rounded-full opacity-80 animate-twinkle" />
+        <div
+          className="absolute top-[25%] left-[80%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute top-[45%] left-[30%] w-1 h-1 bg-white rounded-full opacity-90 animate-twinkle"
+          style={{ animationDelay: "2s" }}
+        />
+        <div
+          className="absolute top-[60%] left-[70%] w-1 h-1 bg-white rounded-full opacity-70 animate-twinkle"
+          style={{ animationDelay: "0.5s" }}
+        />
+        <div
+          className="absolute top-[80%] left-[20%] w-1 h-1 bg-white rounded-full opacity-85 animate-twinkle"
+          style={{ animationDelay: "1.5s" }}
+        />
+        <div
+          className="absolute top-[15%] left-[60%] w-1 h-1 bg-white rounded-full opacity-75 animate-twinkle"
+          style={{ animationDelay: "3s" }}
+        />
+        <div
+          className="absolute top-[70%] left-[90%] w-1 h-1 bg-white rounded-full opacity-65 animate-twinkle"
+          style={{ animationDelay: "2.5s" }}
+        />
+        <div
+          className="absolute top-[35%] left-[10%] w-1 h-1 bg-white rounded-full opacity-80 animate-twinkle"
+          style={{ animationDelay: "0.8s" }}
+        />
 
-      {/* Subtle grid overlay */}
+        {/* Layer 2 - Smaller stars */}
+        <div
+          className="absolute top-[20%] left-[45%] w-0.5 h-0.5 bg-white rounded-full opacity-50 animate-twinkle"
+          style={{ animationDelay: "4s" }}
+        />
+        <div
+          className="absolute top-[55%] left-[85%] w-0.5 h-0.5 bg-white rounded-full opacity-40 animate-twinkle"
+          style={{ animationDelay: "1.2s" }}
+        />
+        <div
+          className="absolute top-[75%] left-[40%] w-0.5 h-0.5 bg-white rounded-full opacity-60 animate-twinkle"
+          style={{ animationDelay: "3.5s" }}
+        />
+        <div
+          className="absolute top-[30%] left-[75%] w-0.5 h-0.5 bg-white rounded-full opacity-45 animate-twinkle"
+          style={{ animationDelay: "2.8s" }}
+        />
+        <div
+          className="absolute top-[50%] left-[15%] w-0.5 h-0.5 bg-white rounded-full opacity-55 animate-twinkle"
+          style={{ animationDelay: "0.3s" }}
+        />
+        <div
+          className="absolute top-[85%] left-[65%] w-0.5 h-0.5 bg-white rounded-full opacity-35 animate-twinkle"
+          style={{ animationDelay: "4.2s" }}
+        />
+        <div
+          className="absolute top-[40%] left-[95%] w-0.5 h-0.5 bg-white rounded-full opacity-50 animate-twinkle"
+          style={{ animationDelay: "1.8s" }}
+        />
+        <div
+          className="absolute top-[90%] left-[25%] w-0.5 h-0.5 bg-white rounded-full opacity-40 animate-twinkle"
+          style={{ animationDelay: "3.8s" }}
+        />
+      </div>
+
+      {/* Very subtle grid overlay */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -88,21 +92,9 @@ export function CSSStarfieldBackground() {
             linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
           `,
-          backgroundSize: "80px 80px",
+          backgroundSize: "100px 100px",
         }}
       />
-
-      <style jsx>{`
-        @keyframes twinkle {
-          0%,
-          100% {
-            opacity: 0.6;
-          }
-          50% {
-            opacity: 1;
-          }
-        }
-      `}</style>
     </div>
   );
 }
