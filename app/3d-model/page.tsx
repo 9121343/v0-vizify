@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { StarfieldBackground } from "@/components/starfield-background";
+import { CSSStarfieldBackground } from "@/components/css-starfield-background";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
