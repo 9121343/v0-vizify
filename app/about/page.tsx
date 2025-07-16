@@ -1,10 +1,11 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { StarfieldBackground } from "@/components/starfield-background";
+import { CSSStarfieldBackground } from "@/components/css-starfield-background";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Rocket,
   Target,
@@ -23,25 +24,29 @@ const teamMembers = [
     name: "Alex Chen",
     role: "CEO & Founder",
     description: "Visionary leader with 15+ years in footwear innovation",
-    avatar: "👨‍💼",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face&auto=format&q=80",
   },
   {
     name: "Maya Rodriguez",
     role: "Head of Design",
     description: "Award-winning designer specializing in sustainable fashion",
-    avatar: "👩‍🎨",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b524?w=200&h=200&fit=crop&crop=face&auto=format&q=80",
   },
   {
     name: "Dr. James Park",
     role: "Chief Technology Officer",
     description: "MIT graduate pioneering smart materials research",
-    avatar: "👨‍🔬",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&auto=format&q=80",
   },
   {
     name: "Sarah Johnson",
     role: "Sustainability Director",
     description: "Environmental scientist committed to eco-friendly production",
-    avatar: "👩‍🌾",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face&auto=format&q=80",
   },
 ];
 
