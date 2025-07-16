@@ -51,7 +51,32 @@ export function CSSStarfieldBackground() {
             1050px 85px 0 0 rgba(255,255,255,0.6),
             1090px 55px 0 0 white
           `,
-          animation: "twinkle 3s ease-in-out infinite alternate",
+        }}
+        className="animate-twinkle"
+        style={{
+          background: "transparent",
+          boxShadow: `
+            10px 10px 0 0 white,
+            150px 30px 0 0 rgba(255,255,255,0.8),
+            290px 60px 0 0 rgba(255,255,255,0.6),
+            430px 20px 0 0 white,
+            570px 80px 0 0 rgba(255,255,255,0.7),
+            710px 40px 0 0 rgba(255,255,255,0.5),
+            850px 70px 0 0 white,
+            990px 15px 0 0 rgba(255,255,255,0.8),
+            130px 150px 0 0 rgba(255,255,255,0.6),
+            270px 190px 0 0 white,
+            410px 125px 0 0 rgba(255,255,255,0.7),
+            550px 165px 0 0 rgba(255,255,255,0.5),
+            690px 185px 0 0 white,
+            830px 135px 0 0 rgba(255,255,255,0.8),
+            970px 175px 0 0 rgba(255,255,255,0.6),
+            110px 245px 0 0 white,
+            250px 295px 0 0 rgba(255,255,255,0.7),
+            390px 255px 0 0 rgba(255,255,255,0.5),
+            530px 215px 0 0 white,
+            670px 285px 0 0 rgba(255,255,255,0.8)
+          `,
         }}
       />
 
