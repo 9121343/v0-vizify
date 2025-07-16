@@ -1,35 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-export function FloatingShoes({ count = 3 }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
-
-  // Simple CSS animation instead of complex motion components
+export function FloatingShoes({ count = 2 }) {
+  // Simple CSS-only floating elements - no JavaScript needed
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(count)].map((_, i) => (
-        <div
-          key={i}
-          className="absolute animate-float opacity-10"
-          style={{
-            left: `${20 + i * 30}%`,
-            top: `${10 + i * 20}%`,
-            animationDelay: `${i * 2}s`,
-            animationDuration: `${6 + i * 2}s`,
-          }}
-        >
-          <div className="w-32 h-32 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full opacity-30 blur-sm" />
-        </div>
-      ))}
+      <div
+        className="absolute animate-float opacity-10"
+        style={{
+          left: "20%",
+          top: "15%",
+          animationDelay: "0s",
+          animationDuration: "8s",
+        }}
+      >
+        <div className="w-24 h-24 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full opacity-20 blur-sm" />
+      </div>
+      <div
+        className="absolute animate-float opacity-10"
+        style={{
+          left: "70%",
+          top: "60%",
+          animationDelay: "3s",
+          animationDuration: "10s",
+        }}
+      >
+        <div className="w-20 h-20 bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-full opacity-15 blur-sm" />
+      </div>
     </div>
   );
 }
