@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { CSSStarfieldBackground } from "@/components/css-starfield-background";
+import { ShowcaseSection } from "@/components/showcase-section";
 
 export default function Home() {
   return (
